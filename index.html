@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temas Raros — Generador infinito de curiosidades</title>
+<meta name="description" content="Generador infinito de temas raros e interesantes para investigar y conversar, con un panel tipo tablero de aeropuerto que cambia letra por letra.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%230a0a0a%22/><rect x=%2222%22 y=%2230%22 width=%2256%22 height=%2218%22 rx=%223%22 fill=%22%23f5b544%22/><rect x=%2222%22 y=%2252%22 width=%2256%22 height=%2218%22 rx=%223%22 fill=%22%233a3a3a%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-glow" aria-hidden="true"></div>
+
+<main class="page">
+
+  <header class="hero">
+    <p class="eyebrow">Investiga · Conversa · Sorpréndete</p>
+    <h1 class="title">TEMAS&nbsp;RAROS</h1>
+    <p class="subtitle">Un tablero infinito de curiosidades. Presiona el botón y descubre algo extraño para investigar y de qué hablar hoy.</p>
+  </header>
+
+  <section class="board-wrap" aria-label="Tablero de tema generado">
+    <div class="board-frame">
+      <div class="board-label">
+        <span class="dot" id="statusDot"></span>
+        <span id="counterLabel">TEMA 000</span>
+      </div>
+      <div class="split-flap" id="board" role="status" aria-live="polite"></div>
+      <div class="board-vent" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="controls">
+    <button id="generateBtn" class="generate-btn">
+      <span class="btn-label">Generar tema</span>
+      <span class="btn-icon" aria-hidden="true">↻</span>
+    </button>
+    <p class="hint">Combinaciones prácticamente infinitas — nunca se agotan los temas.</p>
+  </div>
+
+  <section class="history" aria-label="Historial de temas recientes">
+    <h2 class="history-title">Anteriores</h2>
+    <ul id="historyList" class="history-list"></ul>
+  </section>
+
+  <footer class="footer">
+    <p>Hecho para quienes se aburren de hablar siempre de lo mismo.</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
